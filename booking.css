@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../../images/Home/neture.png') no-repeat center center/cover;
+    height: 60vh;
+    position: relative;
+    color: #fff;
+    padding-bottom: 80px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(
+        to right,
+        #ed861f 0%,
+        rgb(219, 218, 218) 50%,
+        #1ab50c 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #FF9933, #138808);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn-orange {
+    background: #FF6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-orange:hover {
+    background: #FF4500;
+    transform: scale(1.08);
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-outline {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* Booking Section */
+.booking-section {
+    padding: 80px 20px;
+    background: url('../../images/Home/wildlife.png') no-repeat center center/cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.booking-form-container {
+    background: rgba(67, 66, 66, 0.629);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.booking-form-container h2 {
+    color: #000;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error-message {
+    background: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    background: #27ae60;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background: white;
+    color: #000;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #FF6600;
+}
+
+.price-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.price-summary h3 {
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.price-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    font-size: 14px;
+}
+
+.price-item.total {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}
+
+.btn-book {
+    background: #FF6600;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-book:hover {
+    background: #FF4500;
+}
+
+/* Booking Info */
+.booking-info {
+    background:rgba(67, 66, 66, 0.629);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.booking-info h3 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.info-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.info-feature i {
+    color: #FF6600;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.info-feature h4 {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.info-feature p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.contact-support {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-support h4 {
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-support p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Page3 Section */
+.page3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    height: 425px;
+    background: linear-gradient(to right, #73bbab, #286452);
+    color: white;
+}
+
+.page3 .left {
+    max-width: 500px;
+}
+
+.page3 h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.page3 p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.page3 button {
+    background: #ff512f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.page3 .right {
+    position: relative;
+}
+
+.page3 img {
+    max-width: 400px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.footer-top h2 { 
+    margin: 0; 
+    letter-spacing: 2px; 
+}
+
+.footer-top p { 
+    margin: 8px 0 20px; 
+    color: white; 
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links div {
+    min-width: 150px;
+    margin: 10px;
+}
+
+.footer-links h4 { 
+    margin-bottom: 10px; 
+}
+
+.footer-links a {
+    display: block;
+    color: #dbe3ee;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-links a:hover { 
+    text-decoration: underline; 
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .booking-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .page3 {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .page3 h1 {
+        font-size: 28px;
+    }
+    
+    .page3 img {
+        max-width: 250px;
+        margin-top: 20px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .btn-orange {
+        margin-top: 10px;
+    }
+    
+    .features {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 24px;
+    }
+    
+    .booking-form-container,
+    .booking-info {
+        padding: 20px;
+    }
+}

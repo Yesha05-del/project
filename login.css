@@ -1,0 +1,32 @@
+/* Registration and Login specific styles */
+.admin-form-section {
+  background: url('../../images/Home/home1_2.png') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.login-link, .register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link a, .register-link a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+}
